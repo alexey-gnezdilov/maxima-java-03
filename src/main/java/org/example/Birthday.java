@@ -14,9 +14,9 @@ public class Birthday {
     public static LocalDate nextBirthday(int year, int month, int date) {
         LocalDate birthDay = LocalDate.of(year,month,date);
         LocalDate today = LocalDate.now();
-        while (birthDay.isBefore(today)) {
-            birthDay = birthDay.plusDays(1000);
-        }
-        return birthDay;
+        long between = ChronoUnit.DAYS.between(birthDay, today);
+        long round = between - between % 1000 + (between % 1000 == 0 ? 0 : 1000);
+        long toAdd = round - between;
+        return today.plusDays(toAdd);
     }
 }
