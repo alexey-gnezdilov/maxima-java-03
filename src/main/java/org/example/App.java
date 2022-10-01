@@ -8,6 +8,7 @@ public class App {
         try {
             Cat cat1 = CatFactory.createCat("Pepsi", 12);
             Cat cat2 = CatFactory.createCat("Pepsi", -12);
+            Cat cat3 = CatFactory.createCat("Pepsi", -13);
         } catch (IncorrectCatWeightException e){}
     }
 }
