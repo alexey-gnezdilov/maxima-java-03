@@ -6,8 +6,8 @@ public class App {
 //        System.out.println(Birthday.nextBirthday(1993,8,24));
 
         try {
-            CatFactory.createCat("Pepsi", 12);
-            CatFactory.createCat("Pepsi", -12);
+            Cat cat1 = CatFactory.createCat("Pepsi", 12);
+            Cat cat2 = CatFactory.createCat("Pepsi", -12);
         } catch (IncorrectCatWeightException e){}
     }
 }
