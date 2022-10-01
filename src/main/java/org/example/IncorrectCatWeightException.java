@@ -1,4 +1,4 @@
-package org.example.cat;
+package org.example;
 
 public class IncorrectCatWeightException extends Exception{
     public IncorrectCatWeightException() {
