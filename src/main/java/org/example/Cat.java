@@ -21,11 +21,10 @@ public class Cat {
     }
 
     public void setWeight(int weight) throws IncorrectCatWeightException{
-        if (weight > 0) {
+        if (weight > 0)
             this.weight = weight;
-        } else {
+        else
             throw new IncorrectCatWeightException();
-        }
     }
 
     public boolean isAngry() {
