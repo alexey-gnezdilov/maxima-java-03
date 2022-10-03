@@ -6,7 +6,11 @@ public class Cat {
     private int weight;
     private boolean isAngry;
 
-    public Cat() {}
+    public Cat(String name, int weight, boolean isAngry) throws IncorrectCatWeightException {
+        this.name = name;
+        this.isAngry = isAngry;
+        setWeight(weight);
+    }
 
     public String getName() {
         return name;

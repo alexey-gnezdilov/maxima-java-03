@@ -1,18 +1,14 @@
 package org.example;
 
 public class CatFactory {
-    public static Cat createCat(String name, int weight) throws IncorrectCatWeightException{
+    public static Cat createCat(String name, int weight) throws IncorrectCatWeightException {
 
-        Cat cat = null;
+        Cat cat;
 
         try {
-            cat = new Cat();
-            cat.setName(name);
-            cat.setWeight(weight);
-            cat.setAngry(false);
+            cat = new Cat(name,weight,false);
         } catch (IncorrectCatWeightException e) {
-            cat.setWeight(5);
-            cat.setAngry(true);
+           cat = new Cat(name, 5, true);
         }
         return cat;
     }
