@@ -1,19 +1,9 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class QueueKitchen<T> implements AnimalKitchen<T>{
-
-    List<T> animals = new ArrayList<>();
-
-    @Override
-    public void add(T animal) {
-        animals.add(animal);
-    }
+public class QueueKitchen<T> extends AnimalKitchenImpl<T>{
 
     @Override
     public void feed() {
-        animals.remove(0);
+        getAnimals().remove(0);
     }
 }
