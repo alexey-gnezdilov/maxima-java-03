@@ -37,4 +37,8 @@ public class Cat {
     public void setAngry(boolean angry) {
         isAngry = angry;
     }
+
+    public String getFirstLetterInName() {
+        return String.valueOf(this.name.charAt(0));
+    }
 }
