@@ -39,6 +39,6 @@ public class Cat {
     }
 
     public String getFirstLetterInName() {
-        return String.valueOf(this.name.charAt(0));
+        return String.valueOf(getName().charAt(0));
     }
 }
